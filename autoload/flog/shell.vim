@@ -7,7 +7,7 @@ function! flog#shell#Escape(str) abort
   if a:str ==# '-'
     return a:str
   endif
-  return escape(a:str, ' *?[]{}`$\%#"|!<();&>' . "\n\t'")
+  return shellescape(a:str)
 endfunction
 
 function! flog#shell#EscapeList(list) abort
